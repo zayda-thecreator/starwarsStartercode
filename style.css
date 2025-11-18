@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato|Poller+One&display=swap");
 
-img {
-  align-self: center;
-}
-
-
-
 
 @font-face {
   font-family: "SF Distant Galaxy";
@@ -13,23 +7,89 @@ img {
 }
 
 
-/* phone */
+/* Base styles */
 body {
-  background-color: #e4e7ec;
+  background-color: #131e57;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
-
 
 
 h1 {
   font-family: "SF Distant Galaxy";
+  color: yellow;
+  text-align: center;
+  margin: 20px 0;
 }
 
 
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
 
-/* computer */
-@media screen and (min-width: 600px) {
+
+nav div {
+  margin: 10px;
+}
 
 
+a {
+  color: yellow;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2em;
+}
 
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+div.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  nav div {
+    margin: 5px 0;
+  }
+
+
+  div.row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/* Desktop */
+@media screen and (min-width: 601px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+
+ p{
+  color: yellow;
+  font-size: 30px;
 }
 
